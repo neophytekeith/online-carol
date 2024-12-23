@@ -122,3 +122,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Set the date for Christmas
+    const christmasDate = new Date(new Date().getFullYear(), 11, 25, 0, 0, 0);
+
+    // Update the countdown every second
+    const countdownInterval = setInterval(() => {
+        const now = new Date();
+        const timeRemaining = christmasDate - now;
+
+        // If Christmas has passed, update to the next year
+        if (timeRemaining < 0) {
+            christmasDate.setFullYear(christmasDate.getFullYear() + 1);
+        }
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Update the countdown display
+        document.getElementById('time-remaining').textContent = 
+            `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+
+    }, 1000);
+});
