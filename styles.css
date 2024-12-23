@@ -10,7 +10,7 @@ body {
 
 
 
-
+/* snowflakes */
 
 .snow-container {
     position: fixed;
@@ -171,4 +171,24 @@ footer {
 .close:focus {
     color: #000;
     text-decoration: none;
+}
+
+
+/* countdownnnnnn */
+.countdown {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#time-remaining {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
 }
