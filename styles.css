@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     background-color: #008080;
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
     color: #333;
     margin: 0;
     padding: 0;
@@ -65,9 +66,9 @@ body {
 
 
 header {
-    background-color: #800000;
+
     color: #fff;
-    padding: 20px;
+    padding: 1px;
 }
 
 /* Blinking Text Animation */
@@ -79,7 +80,7 @@ header {
 }
 
 .blinking {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     animation: blink-colors 1s infinite;
 }
@@ -87,6 +88,16 @@ header {
 
 main {
     margin: 20px;
+}
+
+.mangarol{
+    font-size: 25px;
+    color: white;
+}
+
+.mabuot{
+    color: white;
+    font-size: 15px;
 }
 
 button {
@@ -118,12 +129,17 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
     color: white;
-    padding: 2px 0;
+    padding: 1px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.no-underline{
+    text-decoration: none;
+    color: #b3ff00;
+    font-weight: 500;
 }
 
 /* Modal Styles */
