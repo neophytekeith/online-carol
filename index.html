@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Carol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="blinking">MERRY CHRISTMAS PO!🎄</h1>
+        <p> ayoo! mangarol po!</p>
+    </header>
+
+        <!----------snowflakes-->
+        <div class="snow-container"></div>
+        <div style="height: 200vh;">
+
+    <main>
+        <audio id="carol" src="carol-song/online-caroling.mp3" type="audio"></audio>
+        <div>
+            <button id="play-button">🎶 Play Carol</button>
+        </div>
+        <div class="donation-section">
+            <h2>Feeling Generous?</h2>
+            <button id="donate-button">🎁 gai kwarta</button>
+            <button id="pass-button">⏩ pass</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 by Keith. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for QR Code -->
+    <div id="qr-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3 class="note">pa scan po hihihi</h3>
+            <img src="image/gcash-qr.jpg" alt="GCash QR Code" class="qr-code">
+            <p class="note">Thank you po!🎄</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
