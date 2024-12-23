@@ -3,6 +3,9 @@ const carolAudio = document.getElementById('carol');
 const donateButton = document.getElementById('donate-button');
 const passButton = document.getElementById('pass-button');
 const qrModal = document.getElementById('qr-modal');
+
+const modal = document.getElementById('qr-modal');
+const thankYouAudio = document.getElementById('thank-you-audio');
 const closeModal = document.getElementById('close-modal');
 
 playButton.addEventListener('click', () => {
@@ -154,21 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Get modal and audio elements
-const modal = document.getElementById('qr-modal');
-const thankYouAudio = document.getElementById('thank-you-audio');
 
-
-// Open modal and play thank you audio
+// Open modal and play thank you audio when donate button is clicked
 document.getElementById('donate-button').addEventListener('click', () => {
     modal.style.display = 'block'; // Show modal
     thankYouAudio.play(); // Play the thank you music
 });
 
-// Close modal and stop thank you audio
+// Close modal and stop thank you audio when close button is clicked
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none'; // Hide modal
-    thankYouAudio.pause(); // Pause the thank you music
+    thankYouAudio.pause(); // Stop the thank you music
     thankYouAudio.currentTime = 0; // Reset to the beginning of the track
 });
 
