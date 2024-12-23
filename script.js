@@ -147,7 +147,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update the countdown display
         document.getElementById('time-remaining').textContent = 
-            `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+            `${days} Day, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
 
     }, 1000);
+});
+
+
+
+// Get modal and audio elements
+const modal = document.getElementById('qr-modal');
+const thankYouAudio = document.getElementById('thank-you-audio');
+
+
+// Open modal and play thank you audio
+document.getElementById('donate-button').addEventListener('click', () => {
+    modal.style.display = 'block'; // Show modal
+    thankYouAudio.play(); // Play the thank you music
+});
+
+// Close modal and stop thank you audio
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none'; // Hide modal
+    thankYouAudio.pause(); // Pause the thank you music
+    thankYouAudio.currentTime = 0; // Reset to the beginning of the track
+});
+
+// Optional: Close modal if clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        thankYouAudio.pause();
+        thankYouAudio.currentTime = 0;
+    }
 });
