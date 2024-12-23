@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: gray;
+    background-color: #008080;
     color: #333;
     margin: 0;
     padding: 0;
@@ -65,7 +65,7 @@ body {
 
 
 header {
-    background-color: #ff6f61;
+    background-color: #800000;
     color: #fff;
     padding: 20px;
 }
@@ -140,7 +140,7 @@ footer {
 }
 
 .modal-content {
-    background-color: gray;
+    background-color: #000080;
     margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
@@ -176,7 +176,7 @@ footer {
 
 /* countdownnnnnn */
 .countdown {
-    background-color: #ff6f61;
+    background-color: #800000;
     color: white;
     padding: 20px;
     margin: 20px auto;
